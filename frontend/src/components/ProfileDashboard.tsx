@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Bookmark, Grid, Compass, Lock, Calendar, Send, ArrowUpRight, Award } from 'lucide-react';
 import { User, Gem } from '../types';
-import { motion } from 'motion/react';
+import { motion } from "framer-motion";
 
 interface ProfileDashboardProps {
   user: User | null;

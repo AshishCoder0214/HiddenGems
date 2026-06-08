@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { MapPin, Key, Mail, AlertCircle, ArrowRight } from 'lucide-react';
+import { motion } from "framer-motion";
 
 interface LoginProps {
   onLoginSuccess: (token: string, user: any) => void;

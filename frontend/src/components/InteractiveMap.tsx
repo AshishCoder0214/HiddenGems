@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, Award, Compass, Navigation, Filter, Bookmark, Star, X, Info, HelpCircle } from 'lucide-react';
 import { Gem, Filters } from '../types';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from "framer-motion";
 import L from 'leaflet';
 
 interface InteractiveMapProps {

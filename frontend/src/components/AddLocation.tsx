@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Compass, Camera, Sparkles, AlertCircle, ArrowLeft, ArrowRight, Check, MapPin, Volume2 } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from "framer-motion";
 import L from 'leaflet';
 
 interface AddLocationProps {

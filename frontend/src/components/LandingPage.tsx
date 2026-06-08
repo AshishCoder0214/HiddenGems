@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Search, Compass, Shield, Award, GraduationCap, Volume2, ArrowUpRight, ArrowRight, Share2, Globe, Heart, MapPin } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion } from "framer-motion";
 
 interface LandingPageProps {
   onSearch: (searchQuery: string, category: string) => void;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { MapPin, Key, Mail, User, AlertCircle, ArrowRight } from 'lucide-react';
+import { motion } from "framer-motion";
 
 interface RegisterProps {
   onRegisterSuccess: (token: string, user: any) => void;

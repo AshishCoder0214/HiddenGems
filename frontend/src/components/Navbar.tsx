@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { MapPin, Bell, Sun, Moon, LogOut } from 'lucide-react';
 import { User } from '../types';
+import { motion } from "framer-motion";
 
 interface NavbarProps {
   user: User | null;
