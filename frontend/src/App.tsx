@@ -69,10 +69,11 @@ export default function App() {
       setIsLoading(false);
     }
   };
+const API_URL = import.meta.env.VITE_API_URL;
 
   const fetchGems = async () => {
     try {
-      const gemsRes = await fetch('/api/gems');
+      const gemsRes = await fetch(`${API_URL}/api/gems`);
       if (gemsRes.ok) {
         const gemsData = await gemsRes.json();
         // Read paginated wrapper format data: Gem[]
