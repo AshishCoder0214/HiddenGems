@@ -1,0 +1,32 @@
+name: Monorepo Integration & Validation CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Codebase
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js Environment
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: 'npm'
+
+    - name: Install Monorepo Workspace Dependencies
+      run: |
+        npm install
+        npm run install:all
+
+    - name: Run Frontend Lint & Compile Check
+      run: npm run build --prefix frontend
+
+    - name: Compile Backend Check
+      run: node --check backend/server.js

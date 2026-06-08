@@ -1,0 +1,6 @@
+{
+  "name": "Hidden Gems",
+  "description": "A community-powered platform for discovering local, off-the-radar spots like quiet study nooks, budget food stalls, scenic viewpoints, and work-friendly cafes with real-time conditions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
