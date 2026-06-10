@@ -89,7 +89,7 @@ export default function AddLocation({ onSubmitGem, darkMode = false }: AddLocati
     });
 
     // Drag marker to reposition coordinate select state values
-    marker.on('dragend', (e) => {
+    marker.on('dragend', (e: any) => {
       const position = e.target.getLatLng();
       setLat(parseFloat(position.lat.toFixed(4)));
       setLon(parseFloat(position.lng.toFixed(4)));
