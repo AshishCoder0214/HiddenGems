@@ -10,6 +10,8 @@ import Register from './components/Register';
 import { Gem, User } from './types';
 import { motion, AnimatePresence } from 'motion/react';
 
+const API_URL = import.meta.env.VITE_API_URL || '';
+
 // Route protection guard wrapper
 interface ProtectedRouteProps {
   children: React.ReactNode;
@@ -51,7 +53,7 @@ export default function App() {
   // Sync session profile data when token updates
   const fetchUserProfile = async (sessionToken: string) => {
     try {
-      const res = await fetch('/api/profile', {
+      const res = await fetch(`${API_URL}/api/profile`, {
         headers: {
           'Authorization': `Bearer ${sessionToken}`
         }
@@ -69,7 +71,6 @@ export default function App() {
       setIsLoading(false);
     }
   };
-const API_URL = import.meta.env.VITE_API_URL;
 
   const fetchGems = async () => {
     try {
@@ -121,7 +122,7 @@ const API_URL = import.meta.env.VITE_API_URL;
   const handleSubmitGem = async (newGemData: any): Promise<boolean> => {
     if (!token) return false;
     try {
-      const res = await fetch('/api/gems', {
+      const res = await fetch(`${API_URL}/api/gems`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -150,7 +151,7 @@ const API_URL = import.meta.env.VITE_API_URL;
       return false;
     }
     try {
-      const res = await fetch(`/api/gems/${gemId}/save`, {
+      const res = await fetch(`${API_URL}/api/gems/${gemId}/save`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`
